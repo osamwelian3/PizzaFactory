@@ -76,3 +76,23 @@ medium.price = 800;
 large = new Pizza()
 large.size = "Large";
 large.price = 1000;
+
+function validateForm(){
+    if (crust == "" || size == "" || topping == "" || quantity == ""){
+        if (crust == ""){
+            alert(`You didn't choose a crust. Please select desired crust and checkout again.`)
+        }
+        if (size == ""){
+            alert(`You didn't choose a Pizza size. Please select desired size and checkout again.`)
+        }
+        if (topping == ""){
+            alert(`You didn't choose any topping. Please select desired topping and checkout again.`)
+        }
+        if (quantity == ""){
+            alert(`You didn't indicate the quantity. Kindly let us know how many you need and checkout again.`)
+        }
+        return false
+    } else {
+        return true
+    }
+}
