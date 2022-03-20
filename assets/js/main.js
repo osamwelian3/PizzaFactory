@@ -37,3 +37,42 @@ Pizza.prototype.getTotal = function () {
     }
     return (this.price + this.crust.crustPrice + toppingTotal)*this.quantity
 }
+
+// Crusts
+crispy = new Crust()
+crispy.crustName = "Crispy";
+crispy.crustPrice = 100;
+
+staffed = new Crust()
+staffed.crustName = "Staffed";
+staffed.crustPrice = 200;
+
+glutenFree = new Crust()
+glutenFree.crustName = "Gluten Free";
+glutenFree.crustPrice = 300;
+
+// Toppings
+pepperoni = new Topping()
+pepperoni.tName = "Pepperoni"
+pepperoni.basePrice = 150;
+
+chicken = new Topping()
+chicken.tName = "Chicken";
+chicken.basePrice = 350;
+
+vegetable = new Topping()
+vegetable.tName = "Vegetable";
+vegetable.basePrice = 100;
+
+// Pizza Sizes
+small = new Pizza()
+small.size = "Small";
+small.price = 550;
+
+medium = new Pizza()
+medium.size = "Medium";
+medium.price = 800;
+
+large = new Pizza()
+large.size = "Large";
+large.price = 1000;
