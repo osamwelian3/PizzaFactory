@@ -95,3 +95,56 @@
 .navigation-clean {
   background: transparent;
 }
+
+.pizza-1 {
+  transform: scale(1.80);
+  width: unset;
+}
+
+.deco.deco-11 {
+  top: 171px;
+  left: 41px;
+}
+
+.deco.deco-21 {
+  bottom: -80px;
+  left: -230px;
+}
+
+.deco.deco-31 {
+  bottom: -80px;
+  right: -207px;
+}
+
+.deco.deco-41 {
+  top: 125px;
+  right: -71px;
+}
+
+.pizza {
+  transform: scale(0.8);
+}
+
+.deco.deco-1 {
+  top: 0;
+  left: 0;
+}
+
+.deco.deco-2 {
+  bottom: 0;
+  left: 0;
+}
+
+.deco.deco-3 {
+  bottom: 0;
+  right: 0;
+}
+
+.deco.deco-4 {
+  top: 0;
+  right: 0;
+}
+
+.p-r {
+  position: relative;
+}
