@@ -11,7 +11,7 @@
 + [Authors Info](#authors-info)
 
 ## Description
-<p>This pizza website where one is able to view items and even make orders fr their desired pizza</p>
+<p>This is the PizzaFactory website where one is able to view items and even make orders for their desired pizza.</p>
 
 
 [Go Back to the top](#pizza-factory)
