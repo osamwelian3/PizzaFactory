@@ -96,3 +96,101 @@ function validateForm(){
         return true
     }
 }
+
+$(document).ready(function(){
+
+    $("#orderForm").submit(function(evt){
+        evt.preventDefault();
+        customerName = this.name.value;
+        size = this.size.value;
+        crust = this.crust.value
+        pepp = $("[name='pepperoni']").is(":checked") ? $("[name='pepperoni']:checked").val() : "";
+        chick = $("[name='chicken']").is(":checked") ? $("[name='chicken']:checked").val() : "";
+        veg = $("[name='vegetable']").is(":checked") ? $("[name='vegetable']:checked").val() : "";
+        topping = pepp + chick + veg
+        quantity = this.quantity.value
+        delivery = this.delivery.value
+        dlocation = this.dlocation.value
+        // alert("Size: " + size + "Crust: " + crust + "Topping: " + topping + "Quantity: " + quantity + "Delivery: " + delivery + "Location: " + dlocation);
+        var toppings = []
+        if (pepp != "" && pepp == "Pepperoni"){
+            toppings.push(pepperoni)
+        }
+        if (chick != "" && chick == "Chicken"){
+            toppings.push(chicken)
+        }
+        if (veg != "" && veg == "Vegetable"){
+            toppings.push(vegetable)
+        }
+        var userPizza = {}
+
+        if (validateForm()) {
+            if (size == "Small") {
+                userPizza = small
+            } else if (size == "Medium") {
+                userPizza = medium
+            } else if (size == "Large") {
+                userPizza = large
+            } else {
+                alert("We received an invalid size: " + size + ". Please Contact system admin if the error persists")
+            }
+
+            if (crust == "Crispy") {
+                userPizza.crust = crispy
+            } else if (crust == "Stuffed") {
+                userPizza.crust = staffed
+            } else if (crust == "Gluten Free") {
+                userPizza.crust = glutenFree
+            } else {
+                alert("We received an invalid crust: " + crust + ". Please Contact system admin if the error persists")
+            }
+
+            if (toppings.length >= 1) {
+                userPizza.topping = toppings
+                for (topp in userPizza.topping) {
+                    if (userPizza.size == "Small") {
+                        increamentToppingBy = 1
+                        userPizza.topping[topp].tPrice = userPizza.topping[topp].basePrice * increamentToppingBy
+                    } else if (userPizza.size == "Medium") {
+                        increamentToppingBy = 1.5
+                        userPizza.topping[topp].tPrice = userPizza.topping[topp].basePrice * increamentToppingBy
+                    } else if (userPizza.size == "Large") {
+                        increamentToppingBy = 2
+                        userPizza.topping[topp].tPrice = userPizza.topping[topp].basePrice * increamentToppingBy
+                    }
+                }
+            } else {
+                alert("We received an invalid topping: " + topping + ". Please Contact system admin if the error persists")
+            }
+        }
+        userPizza.customer = new customer()
+        userPizza.customer.name = customerName
+        if (dlocation != ""){
+            userPizza.customer.customerLocation = dlocation
+        }
+        userPizza.quantity = parseInt(quantity)
+
+        console.log(userPizza.getTotal())
+        appendToOutput(userPizza)
+
+    });
+
+    $(".changeBtn").click(function(){
+        $("#orderForm").show()
+        $(".orderDetails").hide()
+    });
+
+    $(".backBtn").click(function(){
+        $(".confirmed").hide()
+        $("#orderForm")[0].reset()
+        $("#orderForm").show()
+        $(".orderDetails").hide()
+    });
+
+    $(".confirmBtn").click(function(){
+        $("#orderForm").hide()
+        $(".orderDetails").hide()
+        $(".confirmed").show()
+    });
+
+});
