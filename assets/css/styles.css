@@ -292,3 +292,67 @@ a [for="delivery"]:hover {
   display: block!important;
 }
 
+.carousel-indicators {
+  bottom: -40px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--theme-color)!important;
+}
+
+.reviews {
+  border: 1px solid white;
+  background-color: var(--bs-light);
+  width: calc(100% - 195px);
+  float: left;
+  background: #fff;
+  padding: 40px 50px;
+  position: relative;
+}
+
+.reviews:before {
+  content: "";
+  left: -19px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 17.5px 18px 17.5px 0;
+  border-color: transparent red transparent transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 992px) {
+  .reviews:before {
+    left: 253px;
+    top: -16%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews:before {
+    left: 174px;
+    top: -12%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .reviews:before {
+    left: 154px;
+    top: -10%;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+@media (min-width: 992px) {
+  .review-img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
