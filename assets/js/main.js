@@ -227,3 +227,12 @@ function appendToOutput(pizza) {
     $(".orderDetails").show()
 
 }
+
+// toggle validation for location input
+$(document).mouseover(function(){
+    if($("#delivery").is(':checked')) {
+        $(".location").attr('required', '')
+    } else {
+        $(".location").removeAttr('required')
+    }
+})
