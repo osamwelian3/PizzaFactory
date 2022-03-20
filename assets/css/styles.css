@@ -430,3 +430,7 @@ input[name="quantity"] {
   display: none;
 }
 
+.scale-09 {
+  transform: scale(0.9);
+}
+
