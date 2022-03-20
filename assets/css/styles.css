@@ -198,3 +198,12 @@
     bottom: -20px;
   }
 }
+
+.cardImg {
+  transform: scale(0.7);
+}
+
+.second .card {
+  background: transparent;
+  border-style: none;
+}
