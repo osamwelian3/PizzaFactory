@@ -287,3 +287,8 @@ a [for="delivery"]:hover {
 .hide {
   display: none;
 }
+
+#delivery:checked ~ div .hide {
+  display: block!important;
+}
+
