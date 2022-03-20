@@ -207,3 +207,18 @@
   background: transparent;
   border-style: none;
 }
+
+.third img.rounded-circle:hover {
+  transform: scale(1.05);
+  transition: all 1000ms ease;
+}
+
+.third {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.view {
+  background: var(--theme-color);
+  padding: 12px 12px;
+}
