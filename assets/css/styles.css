@@ -91,3 +91,7 @@
     top: -20px;
   }
 }
+
+.navigation-clean {
+  background: transparent;
+}
