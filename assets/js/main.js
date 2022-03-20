@@ -27,3 +27,13 @@ function Topping (tName, tPrice, basePrice) {
     this.basePrice = basePrice;
     this.tPrice = tPrice;
 }
+
+// prototype method
+Pizza.prototype.getTotal = function () {
+    let toppingTotal = 0
+    // Loop through selected toppings and get total price
+    for (topp in this.topping) {
+        toppingTotal += this.topping[topp].tPrice
+    }
+    return (this.price + this.crust.crustPrice + toppingTotal)*this.quantity
+}
