@@ -162,3 +162,39 @@
   padding-bottom: 95px;
   position: relative;
 }
+
+@media (max-width: 1500px) {
+  .order-bg-bottom {
+    bottom: -80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .order-bg-bottom {
+    bottom: -70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .order-bg-bottom {
+    bottom: -55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-bg-bottom {
+    bottom: -41px;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-bg-bottom {
+    bottom: -35px;
+  }
+}
+
+@media (max-width: 300px) {
+  .order-bg-bottom {
+    bottom: -20px;
+  }
+}
