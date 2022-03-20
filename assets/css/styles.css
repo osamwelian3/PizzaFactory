@@ -250,3 +250,40 @@
 .card-link:hover {
   color: var(--theme-color);
 }
+
+@media (max-width: 992px) {
+  .topping {
+    width: 50%;
+  }
+}
+
+.topping {
+  width: 35%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.topping-div {
+  margin-bottom: 5rem;
+}
+
+a [for="delivery"] {
+  color: var(--theme-color);
+}
+
+a [for="delivery"]:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.location {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.hide {
+  display: none;
+}
