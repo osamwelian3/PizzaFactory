@@ -222,3 +222,22 @@
   background: var(--theme-color);
   padding: 12px 12px;
 }
+
+.menu-bg-top, .menu-bg-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-link.active {
+  border-radius: 30px;
+}
+
+.tab-content .card-text {
+  color: var(--bs-gray);
+}
+
+.tab-content .card-title {
+  color: var(--bs-light);
+}
