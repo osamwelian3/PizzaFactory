@@ -241,3 +241,12 @@
 .tab-content .card-title {
   color: var(--bs-light);
 }
+
+.card-link {
+  text-decoration: none;
+  color: var(--bs-gray-100);
+}
+
+.card-link:hover {
+  color: var(--theme-color);
+}
