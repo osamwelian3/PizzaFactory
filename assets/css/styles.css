@@ -148,3 +148,17 @@
 .p-r {
   position: relative;
 }
+
+.second {
+  background: var(--theme-color);
+  padding-top: 95px;
+  padding-bottom: 95px;
+  position: relative;
+}
+
+.fourth {
+  background: black;
+  padding-top: 0px;
+  padding-bottom: 95px;
+  position: relative;
+}
