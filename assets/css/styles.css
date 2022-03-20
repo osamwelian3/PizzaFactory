@@ -40,3 +40,54 @@
 .heading {
   font-weight: bold;
 }
+
+.order-bg-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  /*bottom: -80px;*/
+}
+
+.order-bg-top {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 1500px) {
+  .order-bg-top {
+    top: -80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .order-bg-top {
+    top: -70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .order-bg-top {
+    top: -55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-bg-top {
+    top: -41px;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-bg-top {
+    top: -35px;
+  }
+}
+
+@media (max-width: 300px) {
+  .order-bg-top {
+    top: -20px;
+  }
+}
