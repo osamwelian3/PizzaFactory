@@ -257,6 +257,66 @@
             <div class="menu-bg-bottom"><img class="img-fluid" src="assets/img/menu-bottom-bg.png"></div>
         </div>
     </section>
+    <section id="order" class="third">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-7 col-md-7 col-lg-6 align-self-center">
+                    <div class="text-sm-center text-md-center text-lg-start text-center">
+                        <h3 class="fs-4 theme-color">Fresh from PizzaFactory</h3>
+                        <h2 class="fs-1 text-dark">OUR SPECIAL MENU</h2>
+                        <p class="text-start">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    </div>
+                </div>
+                <div class="col-sm-7 col-md-7 col-lg-6 text-center align-self-center">
+                    <form id="orderForm" method="post">
+                        <h3>MAKE AN ORDER</h3>
+                        <hr>
+                        <div class="position-relative"><input class="form-control" type="text" name="name" placeholder="Enter Your Name"></div>
+                        <hr class="mt-c" style="margin-top: 5rem;">
+                        <div>
+                            <p>Choose Pizza size</p>
+                        </div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="formCheck-1" name="size" value="Small"><label class="form-check-label" for="formCheck-1">small</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="formCheck-2" name="size" value="Medium"><label class="form-check-label" for="formCheck-2">medium</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="formCheck-3" name="size" value="Large"><label class="form-check-label" for="formCheck-3">large</label></div>
+                        <hr>
+                        <div>
+                            <p>Choose a Crust</p>
+                        </div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="formCheck-4" name="crust" value="Crispy"><label class="form-check-label" for="formCheck-4">crispy</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="formCheck-5" name="crust" value="Stuffed"><label class="form-check-label" for="formCheck-5">stuffed</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="formCheck-6" name="crust" value="Gluten Free"><label class="form-check-label" for="formCheck-6">gluten-free</label></div>
+                        <hr>
+                        <div class="topping-div">
+                            <p>Choose a Topping</p>
+                            <div class="position-relative"><select class="form-select topping" name="topping" style="display: none;">
+                                    <optgroup label="Available toppings">
+                                        <option value="" selected="">----------</option>
+                                        <option value="Pepperoni">Pepperoni</option>
+                                        <option value="Chicken">Chicken</option>
+                                        <option value="Vegetable">Vegetable</option>
+                                    </optgroup>
+                                </select>
+                                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="formCheck-7" name="pepperoni" value="Pepperoni"><label class="form-check-label" for="formCheck-7">Pepperoni</label></div>
+                                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="formCheck-8" name="chicken" value="Chicken"><label class="form-check-label" for="formCheck-8">Chicken</label></div>
+                                <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="formCheck-9" name="vegetable" value="Vegetable"><label class="form-check-label" for="formCheck-9">Vegetable</label></div>
+                            </div>
+                        </div>
+                        <hr class="mt-5">
+                        <div class="pieces-div">
+                            <p>How many pieces</p>
+                            <div class="position-relative"><input class="form-control" type="number" name="quantity" placeholder="e.g 5" min="1"></div>
+                        </div>
+                        <hr class="mt-5">
+                        <div class="mb-5"><input type="checkbox" id="delivery" name="delivery" value="deliver"><a href="#"><label class="form-label" for="delivery">&nbsp; Do you want a door step delivery?</label></a>
+                            <div style="position: relative;"><input class="form-control hide location" type="text" placeholder="Enter Delivery Location" name="dlocation"></div>
+                        </div>
+                        <div class="text-center mt-2"><button class="btn btn-primary border rounded-pill view" id="checkout" type="submit">CheckOut</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
