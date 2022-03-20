@@ -389,3 +389,44 @@ a [for="delivery"]:hover {
   padding-top: 100px;
 }
 
+input[name="name"] {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+input[name="quantity"] {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.pieces-div {
+  margin-bottom: 5rem;
+}
+
+.orderDetails {
+  display: none;
+}
+
+.ConfirmBtn {
+  background-color: var(--theme-color);
+  border: none;
+}
+
+.backBtn {
+  background-color: var(--theme-color);
+  border: none;
+}
+
+.changeBtn {
+  background-color: var(--theme-color);
+  border: none;
+}
+
+.confirmed {
+  display: none;
+}
+
