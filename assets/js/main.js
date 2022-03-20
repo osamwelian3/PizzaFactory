@@ -195,3 +195,35 @@ $(".confirmBtn").click(function(){
     $(".orderDetails").hide()
     $(".confirmed").show()
 });
+
+function appendToOutput(pizza) {
+    $(".cname").text(pizza.customer.name)
+    $(".psize").text(pizza.size+"  (Kshs. "+pizza.price+")")
+    $(".cprice").text(pizza.crust.crustName+"  (Kshs. "+pizza.crust.crustPrice+")")
+    let tNames = ""
+    let tTotal = 0
+    for (topp in pizza.topping) {
+        tNames += " "+pizza.topping[topp].tName + "("+pizza.topping[topp].tPrice+")"
+        tTotal += pizza.topping[topp].tPrice
+    }
+    $(".tprice").text(tNames+"  (Kshs. "+tTotal+")")
+    $(".qnty").text(pizza.quantity)
+
+    if (dlocation == ""){
+        $(".locRow").hide()
+        $(".feeRow").hide()
+        pizza.customer.customerLocation = ""
+        $(".successLocation").text("")
+        $(".total").text("Kshs. "+pizza.getTotal())
+    } else {
+        $(".locRow").show()
+        $(".feeRow").show()
+        $(".dloc").text(pizza.customer.customerLocation)
+        $(".dfee").text("Kshs. "+deliveryFee)
+        $(".successLocation").text("Your order will be delivered to: "+pizza.customer.customerLocation)
+        $(".total").text("Kshs. "+(pizza.getTotal() + deliveryFee))
+    }
+    $("#orderForm").hide()
+    $(".orderDetails").show()
+
+}
