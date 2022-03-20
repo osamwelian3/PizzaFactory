@@ -1,3 +1,42 @@
 :root {
   --theme-color: #fd9d3e;
 }
+
+.first {
+  background: var(--bs-dark);
+  position: relative;
+  min-height: 608px;
+}
+
+.first:before {
+  content: "";
+  position: absolute;
+  background-image: url("../../assets/img/chef-bg.png");
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item .container .row div .heading, .carousel-item .container .row div P {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.deco {
+  width: unset;
+  position: absolute;
+}
+
+@media (max-width: 992px) {
+  .carousel-row {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.theme-color {
+  color: #fd9d3e;
+}
+
+.heading {
+  font-weight: bold;
+}
