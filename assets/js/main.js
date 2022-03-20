@@ -175,22 +175,23 @@ $(document).ready(function(){
 
     });
 
-    $(".changeBtn").click(function(){
-        $("#orderForm").show()
-        $(".orderDetails").hide()
-    });
+});
 
-    $(".backBtn").click(function(){
-        $(".confirmed").hide()
-        $("#orderForm")[0].reset()
-        $("#orderForm").show()
-        $(".orderDetails").hide()
-    });
+// UI logic - user experience
+$(".changeBtn").click(function(){
+    $("#orderForm").show()
+    $(".orderDetails").hide()
+});
 
-    $(".confirmBtn").click(function(){
-        $("#orderForm").hide()
-        $(".orderDetails").hide()
-        $(".confirmed").show()
-    });
+$(".backBtn").click(function(){
+    $(".confirmed").hide()
+    $("#orderForm")[0].reset()
+    $("#orderForm").show()
+    $(".orderDetails").hide()
+});
 
+$(".confirmBtn").click(function(){
+    $("#orderForm").hide()
+    $(".orderDetails").hide()
+    $(".confirmed").show()
 });
