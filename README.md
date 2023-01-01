@@ -27,7 +27,7 @@
 * JQUERY - which was used alongside javascript to handle the business logic and visual effects
 
 ## Live Link
-#### Delani Studio - (https://samuelodhiambo.github.io/PizzaFactory/)
+#### Delani Studio - (https://osamwelian3.github.io/PizzaFactory/)
 
 [Go Back to the top](#pizza-factory)
 
